@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #a0eaff;  /* Light blue */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow: auto;
+    padding:20px;
+}
+
+h1 {
+    color: #0077b6;
+}
+
+h2 {
+    color: #0077b6;
+}   
+
+#bigContainer {
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    background: #ffffff; /* Very light blue */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 3px;
+    justify-content: center;
+    margin-top: 2vh;
+    width: 100%;
+    max-width: 600px;
+    height: auto; /* Set a fixed height to make the grid more square */
+    align-self: center; /* Center the grid within the bigContainer */
+    margin-left: auto; /* Ensure the grid is centered */
+    margin-right: auto; /* Ensure the grid is centered */
+}
+
+.cell {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #1e1b1b;
+    font-size: 3vw;
+    cursor: pointer;
+    background-color: #b0e0e6; /* Pastel blue */
+    color: #1e1b1b;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cell:hover {
+    background-color: #87ceeb; /* Light sky blue */
+    transform: scale(1.05);
+}
+
+.cell:focus {
+    outline: 2px solid rgb(0, 102, 204);
+}
+
+.selected {
+    background-color: rgb(0, 153, 255);
+    color: white;
+}
+
+.cell.error {
+    background-color: red;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+#codeInput {
+    width: 40%;
+    padding: 12px 40px;
+    border-radius: 10px;
+    border: 2px solid #1e1b1b;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #e0f7fa;
+}
+
+button {
+    background: #0077b6;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #005f8f;
+    transform: scale(1.05);
+}
+
+#victoryMessage {
+    margin-top: 2vh;
+    font-size: 5vw;
+    color: rgb(36, 42, 150);
+    font-weight: bold;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}
